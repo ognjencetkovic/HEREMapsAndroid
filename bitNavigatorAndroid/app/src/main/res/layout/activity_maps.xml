@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0px" >>
+
+        <!-- HERE Maps -->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/include3">
+
+            <!-- Composite Fragment exposes both Map and LiveSight functionality -->
+            <fragment
+                android:id="@+id/compositefragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.here.android.mpa.ar.CompositeFragment" />
+
+            <Button
+                android:id="@+id/startLiveSight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:onClick="startLiveSight"
+                android:text="@string/label_button_startlivesight" />
+
+            <Button
+                android:id="@+id/stopLiveSight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:onClick="stopLiveSight"
+                android:text="@string/label_button_stoplivesight"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/here_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:onClick="setCenter"
+                android:src="@drawable/marker_here"
+                android:padding="10dp"/>
+
+        </RelativeLayout>
+
+        <!--  Header  Starts-->
+        <!--  Header Ends -->
+        <include
+            layout="@layout/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/include3"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

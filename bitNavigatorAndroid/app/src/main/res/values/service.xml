@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="service_all_places">http://10.0.82.95:9000/api/place/list</string>
+    <string name="service_sign_in">http://10.0.82.95:9000/api/user/signin</string>
+    <string name="service_sign_up">http://10.0.82.95:9000/api/user/signup</string>
+</resources>

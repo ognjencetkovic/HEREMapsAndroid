@@ -1,0 +1,46 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:layout_alignParentBottom="true"
+    android:gravity="bottom"
+    >
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/navbar_background"
+        >
+        <RadioButton
+            android:id="@+id/btnProfile"
+            style="@style/navbar_button"
+            android:drawableTop="@drawable/navbar_profileselector"
+            android:text="Profile"
+            android:singleLine="false"
+            android:textColorLink="#f80a0a"
+            android:textColor="#ffffff" />
+        <RadioButton
+            android:id="@+id/btnReservations"
+            style="@style/navbar_button"
+            android:drawableTop="@drawable/navbar_reservationsselector"
+            android:text="Reservations"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFFFF" />
+        <RadioButton
+            android:id="@+id/btnSearch"
+            style="@style/navbar_button"
+            android:drawableTop="@drawable/navbar_searchselector"
+            android:text="Search"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFFFF" />
+        <RadioButton
+            android:id="@+id/btnMap"
+            style="@style/navbar_button"
+            android:drawableTop="@drawable/navbar_mapselector"
+            android:text="Map"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFFFF" />
+    </RadioGroup>
+</RelativeLayout>
